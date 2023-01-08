@@ -57,3 +57,16 @@ pub fn platform() -> Platform {
 pub fn rust_release_mode() -> bool {
     cfg!(not(debug_assertions))
 }
+
+pub enum SomeEnum{
+    A,
+    B
+}
+
+pub struct SomeStruct{
+    pub problem: Vec<SomeEnum>
+}
+
+pub fn ensure_generation() -> SomeStruct{
+    SomeStruct{problem:vec![]}
+}
